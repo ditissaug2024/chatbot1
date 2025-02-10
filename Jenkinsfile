@@ -13,5 +13,5 @@ dependencyCheck {
   analyzers {
     // Other configuration settings
   }
-  nvdApiKey = '659255fe-a05e-4c58-9fb4-5865458d2453'
+  nvdApiKey = 'a73a4f05-9ac1-4352-b078-2c589f713ce0'
 }
