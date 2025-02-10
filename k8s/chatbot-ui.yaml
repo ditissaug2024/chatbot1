@@ -20,10 +20,13 @@ spec:
         - containerPort: 3000   # Use port 3000
 
 ---
+
+  # Remove the type LoadBalancer for now
+
 apiVersion: v1
 kind: Service
 metadata:
-  name: chatbot-service
+ name: chatbot-service
 spec:
   selector:
     app: chatbot
@@ -31,17 +34,4 @@ spec:
   - protocol: TCP
     port: 80                 # Expose port 80
     targetPort: 3000
-  # Remove the type LoadBalancer for now
-
-#apiVersion: v1
-#kind: Service
-#metadata:
- # name: chatbot-service
-#spec:
- # selector:
-  #  app: chatbot
-  #ports:
-  #- protocol: TCP
-   # port: 80                 # Expose port 80
-    #targetPort: 3000
-  #type: LoadBalancer
+  type: LoadBalancer
